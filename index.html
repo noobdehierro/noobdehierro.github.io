@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke Api</title>
+    <link rel="shortcut icon" href="img/pokeball.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">
+            <nav class="nav">
+
+                <img src="img/pokeball.png" alt="pokeball" class="nav__logo">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="#" class="nav__list-link">Pokedex</a></li>
+                    <li class="nav__list-item"><a href="#" class="nav__list-link">Historia</a></li>
+                    <li class="nav__list-item"><a href="#" class="nav__list-link">Juegos Favoritos</a></li>
+                    <li class="nav__list-item"><a href="#" class="nav__list-link">Contactame</a></li>
+                </ul>
+            </nav>
+            <div class="inicio">
+                <img src="img/pokemon-logo.png" alt="logo" class="inicio__img-1">
+                <img src="img/mewtwo.png" alt="logo" class="inicio__img-2">
+
+            </div>
+        </header>
+        <section class="pokedex" id="pokedex">
+            <h1 class="heading-1">
+                Pokedex
+            </h1>
+
+            <form class="search " id="formulario">
+                <input id="pokemon" type="text" class="search__input" placeholder="Buscar Pokemon. Ejemplo: ditto o pikachu">
+                <button class="search__button" type="submit"><span>Buscar</span>
+                    <i class="fas fa-search search__icon"></i>
+                </button>
+                
+            </form>
+            <div class="resultado">
+                <div class="sk-chase" id="spinner">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                  </div>
+
+                  <!-- <div class="alerta">
+                      <p><strong>Error!!</strong><br>
+                        <span>mensaje</span>
+                    </p>
+                  </div> -->
+                <div class="resultado__tarjetas">
+                    
+                    <!-- 
+
+                        tarjetas
+
+
+                     -->
+                </div>
+                
+                <div id="paginacion" class="container mx-auto mb-10 text-center paginacion">
+                </div>
+        </section>
+        <section class="historia" id="historia">
+            <h2 class="heading-2">Historia</h2>
+            <div class="historias">
+                <div class="historias__historia">
+                    <h3 class="heading-3">inicio</h3>
+                    <p class="historias__historia-texto">Pokémon (ポケモン Pokemon?) es una franquicia de medios que
+                        originalmente comenzó como un videojuego RPG, pero debido a su popularidad ha logrado expandirse
+                        a otros medios de entretenimiento como series de televisión, películas, juegos de cartas, ropa,
+                        entre otros, convirtiéndose en una marca que es reconocida en el mercado mundial.</p>
+                    <a href="#inicio" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Primera Generación</h3>
+                    <p class="historias__historia-texto">videojuegos de Pokémon se inicia con los lanzamientos de Pocket
+                        Monsters Aka and Midori (Red y Pokémon Green) en Japón en 1996, para la consola Game Boy. Debido
+                        a la popularidad que alcanzaron estos 2 juegos, poco más tarde apareció Pokémon Blue.</p>
+                    <a href="#g1" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Segunda Generación</h3>
+                    <p class="historias__historia-texto">En el año 2000 fueron lanzados al mercado los juegos Pokémon
+                        Gold y Silver15​16​ para la consola Game Boy Color. En estas versiones aparece una nueva región
+                        conocida como Johto,17​ donde se habían descubierto 100 pokémon nuevos (desde Chikorita hasta
+                        Celebi), llevando un total de 251 hasta en ese entonces.</p>
+                    <a href="#g2" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Tercera Generación</h3>
+                    <p class="historias__historia-texto">En el año 2003 hacen su aparición los juegos Pokémon Ruby y
+                        Sapphire para la consola Game Boy Advance.19​20​ En estas nuevas versiones aparece una nueva
+                        región llamada Hoenn, y 135 nuevas especies de pokémon (desde Treecko hasta Deoxys), elevando el
+                        total de hasta 386 pokémon.</p>
+                    <a href="#g3" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Cuarta Generación</h3>
+                    <p class="historias__historia-texto">Pokémon ediciones Diamante y Perla fueron lanzadas en el 2006
+                        para Nintendo DS, haciendo un total de 489.
+
+                        En estas versiones aparece una región llamada Sinnoh (Shinou en japonés), y se han incluido 107
+                        especies de Pokémon (desde Turtwig hasta Arceus) alcanzando un total hasta ese momento de 493
+                        pokémon.</p>
+                    <a href="#g4" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Quinta Generación</h3>
+                    <p class="historias__historia-texto">La quinta generación de juegos dio paso con el lanzamiento de
+                        las versiones para la consola portátil Nintendo DS, Pokémon Edición Negra y Edición Blanca, que
+                        fueron revelados el 9 de abril de 2010 en el sitio web de Pokémon Japón, trayendo la región
+                        Teselia (Isshun en japonés y Unova en inglés), y una cifra de 156 Pokémon nuevos (desde Victini
+                        hasta Genesect),</p>
+                    <a href="#g5" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Sexta Generación</h3>
+                    <p class="historias__historia-texto">El 8 de enero de 2013 fueron anunciados Pokémon X e Y,34​ que
+                        fueron lanzados el 12 de octubre del mismo año.33​ Se desarrolla en la región de Kalos. Se han
+                        añadido 69 Pokémon nuevos (desde Chespin hasta Zygarde), sumando un total de 718 pokémon.</p>
+                    <a href="#g6" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Septima Generación</h3>
+                    <p class="historias__historia-texto">El 26 de febrero de 2016, y celebrando los 20 años de la salida
+                        del primer juego de la franquicia, fueron anunciados Pokémon Sol y Luna, que fueron lanzados el
+                        18 de noviembre de 2016 (23 de noviembre en Europa) e iniciaron la séptima generación. </p>
+                    <a href="#g7" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+                <div class="historias__historia">
+                    <h3 class="heading-3">Octaba Generación</h3>
+                    <p class="historias__historia-texto">El Pokémon Direct emitido el 27 de febrero de 2019 dio a
+                        conocer los títulos de los primeros juegos de octava generación, Pokémon espada y Pokémon
+                        escudo. Durante el directo de 7 minutos se mostraron algunos lugares de la nueva región, llamada
+                        "Galar", los nuevos Pokémon iniciales.</p>
+                    <a href="#g8" class="historias__historia-btn"> ver mas</a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+        <section class="favoritos">
+            <h2 class="heading-2">Juegos Favoritos</h2>
+            <div class="contenedor-juegos">
+                <div class="juego">
+                    <h3 class="heading-3">5. Pokémon Rojo Fuego y Verde Hoja (2004 - Game Boy Advance)</h3>
+                    <div class="juego__contenido">
+                        <p>Finalmente llegamos al juego que lo inició todo o, siendo más concretos, al remake que
+                            recibió en Game Boy Advance. No vamos a negar que nos ha costado mucho decantarnos por esta
+                            versión o por la original, ya que el mérito de crear este fenómeno, su impacto mundial y su
+                            agradecida "simpleza" en la crianza son cosas que no le va a quitar nadie, pero valorándolo
+                            con algo más de frialdad y apartando la nostalgia, finalmente hemos apostado por Rojo Fuego
+                            y Verde Hoja frente a Rojo y Azul.
+                            <br>
+                            En líneas generales, nos encontramos con la misma y mítica aventura que ya vivimos en la
+                            veterana Game Boy, pero con gráficos totalmente renovados e incluyendo todas las mejoras
+                            jugables y de contenidos que trajeron consigo la segunda y la tercera generación: más
+                            criaturas, la posibilidad de correr, poder jugar como chico o chica, los EV e IV, la
+                            crianza, etcétera. Evidentemente, tampoco faltaron nuevas zonas para explorar, retos que
+                            afrontar y un post-game mucho más interesante y largo. Es decir, no solo era un juego mucho
+                            más bonito en lo visual, sino que jugablemente también estuvo mucho más pulido y
+                            equilibrado, haciendo de su competitivo algo mucho más interesante y justo, pero conservando
+                            al mismo tiempo todo el enorme encanto que hizo de esta aventura todo un fenómeno de masas.
+                        </p>
+                        <img src="img/Pokémon-Rojo-Fuego-y-Pokémon-Verde-Hoja.png" alt="">
+                    </div>
+                </div>
+
+                <div class="juego">
+                    <h3 class="heading-3"> 4. Pokémon Rubí, Zafiro y Esmeralda (2003, 2005 - Game Boy Advance) </h3>
+                    <div class="juego__contenido juego__contenido-reverse">
+                        <p>Probablemente a muchos os sorprenda que hayamos preferido quedarnos con las versiones
+                            originales de Rubí, Zafiro y Esmeralda antes que con sus remakes para Nintendo 3DS, pero,
+                            siendo sinceros, creemos que las ediciones de Game Boy Advance salieron más redondas,
+                            especialmente en lo referente a Pokémon Esmeralda. <br><br>
+                            Si bien el salto gráfico no fue tan grande como esperábamos y la fórmula jugable apenas
+                            evolucionó, Rubí y Zafiro fueron los primeros títulos de la saga en introducir un conflicto
+                            de gran envergadura relacionado con ciertos Pokémon legendarios que llegó a poner al mundo
+                            en peligro, aumentando la escala y épica de nuestras peripecias a unos niveles que no
+                            habíamos conocido hasta aquel entonces. <br><br>
+                            Jugablemente también introdujeron ciertas novedades que acabaron por definir todo el sector
+                            competitivo de la serie, como los combates por parejas y la posibilidad de controlar mejor
+                            la crianza de nuestras criaturas mediante los IV y EV. Además, con Esmeralda se introdujo
+                            uno de los más apasionantes y duros post-game de cualquier entrega con el Frente Batalla,
+                            donde nos esperaban una infinidad de combates realmente desafiantes y complicados con reglas
+                            especiales, algo que fue inexplicablemente eliminado de su remake.
+                        </p>
+                        <img src="img/Pokémon-Rubí-y-Pokémon-Zafiro.png" class="zafiro" alt="">
+                    </div>
+                </div>
+
+                <div class="juego">
+                    <h3 class="heading-3"> 3. Pokémon Blanco y Negro (2011 - Nintendo DS) </h3>
+                    <div class="juego__contenido">
+                        <p>Con la llegada de la quinta generación, Game Freak volvió a la carga con un nuevo juego que,
+                            a pesar de seguir la misma fórmula de siempre, supo ofrecernos muchísima diversión y la que
+                            es, sin lugar a dudas, la mejor historia y narrativa que ha tenido jamás una entrega
+                            principal de la serie hasta el momento, dejándonos de paso con un personaje tan memorable y
+                            elaborado como es N, quien consigue que nos cuestionemos muchas de las concepciones del
+                            mundo Pokémon. <br><br>
+                            No en vano, la recta final de este título es probablemente la más épica y sorprendente de
+                            toda la saga, desmarcándose de la tradicional Liga Pokémon para culminar con un clímax mucho
+                            más elaborado. Y todo ello acompañado de un apartado gráfico totalmente renovado y con
+                            efectos realmente sorprendentes para lo que estábamos habituados a ver en Nintendo DS. La
+                            mala noticia es que, a nivel de diseño de criaturas (no así en el de humanos), sea la
+                            entrega más floja, pero, en general, se trata de una aventura divertidísima y completísima
+                            que nos dio multitud de horas de puro entretenimiento. Sin duda, una de nuestras
+                            generaciones favoritas.
+                        </p>
+                        <img src="img/Pokémon-Negro-y-Blanco-portadas.png" class="zafiro" alt="">
+                    </div>
+                </div>
+
+                <div class="juego">
+                    <h3 class="heading-3"> 2. Pokémon Blanco y Negro 2 (2012 - Nintendo DS)</h3>
+                    <div class="juego__contenido juego__contenido-reverse">
+                        <p>A diferencia de lo que suele pasar, Pokémon Blanco y Negro no recibieron una tercera edición.
+                            En vez de eso, Game Freak apostó por realizar una secuela directa de las mismas para
+                            llevarnos una vez más a Teselia, pero unos años después, con nuevos protagonistas y con una
+                            historia completamente nueva. Lo interesante es que, a pesar del evidente reciclado y de no
+                            incluir una nueva generación de criaturas, redescubrir esta región se convertía en una
+                            aventura muy amena, ya que el paso del tiempo había provocado multitud de cambios en la
+                            mayoría de zonas, por lo que seguía conservando cierta frescura. <br><br>
+                            Por si fuese poco, el título contó con un post-game realmente duro y desafiante que
+                            recuperaba las mejores tradiciones de la saga, ofreciéndonos un reto a la altura con el que
+                            motivarnos a seguir jugando y a esforzarnos por superarlo, dejándonos con una de las
+                            entregas más completas, desafiantes, largas y pulidas de toda la serie, virtudes que han
+                            acabado por dejarnos un recuerdo imborrable y una de las generaciones que más hemos
+                            disfrutado a nivel competitivo.
+                        </p>
+                        <img src="img/Pokemon-Blanco-y-Negro-2.jpg" class="zafiro" alt="">
+                    </div>
+                </div>
+
+                <div class="juego">
+                    <h3 class="heading-3"> 1. Pokémon Oro HeartGold y Plata SoulSilver (2010 - Nintendo DS)</h3>
+                    <div class="juego__contenido">
+                        <p>Y la corona es, tal y como muchos os habréis imaginado, para el remake de Pokémon Oro y
+                            Plata. Cualquier cosa que os digamos sobre este juego probablemente se quede corta, así que
+                            si os gusta Pokémon y nunca habéis tenido la oportunidad de echarle el guante, os animamos a
+                            que intentéis cambiar eso. Las ediciones de Game Boy Color siguen siendo, a día de hoy, de
+                            lo mejor que ha dado la saga, ofreciendo una aventura gigantesca que introdujo no una, sino
+                            dos regiones completas en todo un prodigio técnico que debemos agradecerle a las increíbles
+                            habilidades como programador del tristemente fallecido anterior presidente de Nintendo:
+                            Satoru Iwata. <br><br>
+                            Nuevos tipos de Pokémon, 100 nuevas criaturas genialmente diseñadas, una dificultad bien
+                            ajustada, una historia ampliada, Pokémon variocolor, momentos épicos e inigualables, ciclo
+                            día y noche en tiempo real, etcétera. Y por si fuese poco, gracias a su tercera edición,
+                            Cristal, se amplió la historia, se introdujo por primera vez la posibilidad de poder jugar
+                            como una chica y se extendió considerablemente el post-game con la desafiante y larga Torre
+                            Batalla. Con todo esto, resulta fácil entender que un juego que recoge esta base y la mejora
+                            con los avances que había hecho la saga hasta la cuarta generación (gráficos incluidos) se
+                            haya convertido en nuestro favorito. Y no solo eso, ¡sino que además amplía sus contenidos y
+                            nos trae de vuelta un renovado y desafiante Frente Batalla! Una auténtica pasada y, sin
+                            duda, el título más completo de la serie (y con diferencia). Ojalá volvamos a ver algo
+                            parecido dentro de poco.
+                        </p>
+                        <img src="img/Pokémon-Oro-HeartGold-y-Plata-SoulSilver.jpg" class="zafiro" alt="">
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+
+    </div>
+    <footer class="footer">
+        <h3 class="heading-3">contactame</h3>
+        <div class="iconos">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, corrupti. Magni eveniet nam asperiores. Non
+            odit quas laborum hic minima debitis dolorem excepturi ad, quasi vitae quis reprehenderit fugiat modi!</p>
+
+    </footer>
+
+
+    <div class="contenedor-popup" id="inicio">
+        <div class="popup">
+            <div class="popup__img"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Inicio</h1>
+                <p>Pokémon (ポケモン Pokemon) es una franquicia de medios que originalmente comenzó como un videojuego RPG,
+                    pero debido a su popularidad ha logrado expandirse a otros medios de entretenimiento como series de
+                    televisión, películas, juegos de cartas, ropa, entre otros, convirtiéndose en una marca que es
+                    reconocida en el mercado mundial. Las ventas de videojuegos hasta el 1 de diciembre de 2006 habían
+                    alcanzado una cantidad de 340 millones de ejemplares (incluyendo la venta de la versión Pikachu de
+                    la consola Nintendo 64), logrando ocupar el segundo lugar de las sagas de videojuegos más vendidos
+                    de Nintendo.​ La franquicia celebró su décimo aniversario el 27 de febrero de 2006.</p>
+
+                <p>La saga de videojuegos es desarrollada por la compañía programadora de software japonesa Game Freak,
+                    con personajes creados por Satoshi Tajiri para la empresa de juguetes Creatures Inc., y a su vez
+                    distribuida por Nintendo. La misión en estos juegos es capturar y entrenar a los pokémon (criaturas
+                    cuya denominación da nombre al juego), que hasta la fecha alcanzan el número de 890. La posibilidad
+                    de intercambiarlos le hizo conseguir una popularidad que se plasmó en un éxito de ventas y la
+                    consiguiente aparición de una serie animada, películas y diverso merchandising como peluches,
+                    juguetes y cartas.</p>
+
+                <p>La producción de los videojuegos, serie de anime y demás material para su distribución en occidente
+                    fue realizada en Estados Unidos por 4Kids Entertainment hasta noviembre de 2005, momento en que
+                    decidió no renovar su contrato con Pokémon USA (una subsidiaria de Pokémon Company). Actualmente
+                    esta supervisa todo lo referente al material de Pokémon en su distribución en occidente.​</p>
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g1">
+        <div class="popup popup-2">
+            <div class="popup__img popup__img-2"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Primera Generación</h1>
+                <p>La historia de los videojuegos de Pokémon se inicia con los lanzamientos de Pocket Monsters Aka and
+                    Midori (Red y Pokémon Green) en Japón en 1996, para la consola Game Boy. Debido a la popularidad que
+                    alcanzaron estos 2 juegos, poco más tarde apareció Pokémon Blue. Las versiones originales de Aka (緑)
+                    and Midori nunca han salido a la venta fuera de Japón,12​ sino que internacionalmente se lanzaron
+                    Pokémon Red y Blue, videojuegos con las mejoras de Pokémon Blue, pero con las características de los
+                    originales Aka y Midori.</p>
+
+                <p>La aventura en estas versiones transcurre en la región de Kanto, por lo que el nombre de esta región
+                    suele verse asociado a estos videojuegos de la primera generación. El número de pokémon de estas
+                    versiones es de 151, desde Bulbasaur hasta Mew.</p>
+
+                <p>La tercera versión (cuarta en Japón) de los primeros videojuegos de Pokémon es Pokémon Yellow,13​ el
+                    cual fue lanzado el 2 de septiembre de 1998 en Japón, y en Norteamérica el 1 de octubre de 1999. El
+                    argumento de este título es muy cercano a la serie de anime.</p>
+
+                <p>Luego de esto se realizaron otras subsagas de la franquicia, como las versiones Pokémon Stadium para
+                    Nintendo 64,14​ en donde se podían ver en 3D y usar a los pokémon entrenados de los juegos de RPG de
+                    Game Boy para ingresarlos al juego y luchar.</p>
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g2">
+        <div class="popup popup-2">
+            <div class="popup__img popup__img-3"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Segunda Generación</h1>
+                <p>En el año 2000 fueron lanzados al mercado los juegos Pokémon Gold y Silver15​16​ para la consola Game
+                    Boy Color. En estas versiones aparece una nueva región conocida como Johto,17​ donde se habían
+                    descubierto 100 pokémon nuevos (desde Chikorita hasta Celebi), llevando un total de 251 hasta en ese
+                    entonces. Johto también escondía misterios como el de las antiguas Ruinas Alpha, o el de la Torre
+                    Tin.</p>
+
+                <p>En el año 2001 apareció Pokémon Crystal,18​ el primer juego de Pokémon en donde se puede elegir a un
+                    personaje femenino como protagonista.</p>
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g3">
+        <div class="popup popup-2">
+            <div class="popup__img popup__img-4"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Tercera Generación</h1>
+                <p>En el año 2003 hacen su aparición los juegos Pokémon Ruby y Sapphire para la consola Game Boy
+                    Advance.19​20​ En estas nuevas versiones aparece una nueva región llamada Hoenn, y 135 nuevas
+                    especies de pokémon (desde Treecko hasta Deoxys), elevando el total de hasta 386 pokémon. Se ha
+                    incorporado el concepto de las batallas de equipo de 2 contra 2, los concursos pokémon y los
+                    Pokéblock (Pokécubos en España), así como nuevas habilidades especiales.</p>
+
+                <p>En octubre de 2004 salieron a la venta Pokémon FireRed y LeafGreen,21​22​ siendo un remake de los
+                    primeros juegos, Pokémon Red y Green. El juego se considera parte de la tercera generación debido a
+                    que los movimientos de los pokémon, objetos y el resto de características han sido incorporados.</p>
+
+                <p>En el año 2005 salió a la venta Pokémon Emerald.23​ A diferencia de Ruby y Sapphire, en Pokémon
+                    Emerald es posible enfrentarse a los dos equipos enemigos existentes (el Equipo Aqua y el Equipo
+                    Magma), y nuevos desafíos como la Batalla de la Frontera (Battle Frontier).</p>
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g4">
+        <div class="popup popup-2">
+            <div class="popup__img popup__img-5"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Cuarta Generación</h1>
+                <p>Pokémon ediciones Diamante y Perla fueron lanzadas en el 2006 para Nintendo DS, haciendo un total de
+                    489.</p>
+
+                <p>En estas versiones aparece una región llamada Sinnoh (Shinou en japonés), y se han incluido 107
+                    especies de Pokémon (desde Turtwig hasta Arceus) alcanzando un total hasta ese momento de 493
+                    pokémon.28​ Los gráficos del juego son escenarios en tres dimensiones, y los personajes en 2D, al
+                    igual de la mayoría de objetos con los que interactuar.</p>
+
+                <p>Pokémon Platinum salió a la venta el 13 de septiembre de 2008 en Japón29​ y es un remake de Pokémon
+                    Diamond y Pearl, añadiendo nuevas características e historia. Los títulos spin-off de la cuarta
+                    generación, Pokémon Mystery Dungeon: Explorers of Time y Explorers of Darkness, salieron a la venta
+                    el 20 de abril de 2008. De igual manera, Pokémon Battle Revolution para Wii, el cual dispone de
+                    conectividad Wi-Fi.</p>​
+
+                <p>El 12 de septiembre de 2009 (14 de marzo de 2010 en América y 26 de marzo de 2010 en Europa) salió a
+                    la venta en Japón los remakes de los juegos Pokémon Gold y Silver para la consola Nintendo DS bajo
+                    el título Pokémon HeartGold y SoulSilver.</p>
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g5">
+        <div class="popup popup-2">
+            <div class="popup__img popup__img-6"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Quinta Generación</h1>
+                <p>Pokémon ediciones Diamante y Perla fueron lanzadas en el 2006 para Nintendo DS, haciendo un total de
+                    489.</p>
+
+                <p>En estas versiones aparece una región llamada Sinnoh (Shinou en japonés), y se han incluido 107
+                    especies de Pokémon (desde Turtwig hasta Arceus) alcanzando un total hasta ese momento de 493
+                    pokémon.28​ Los gráficos del juego son escenarios en tres dimensiones, y los personajes en 2D, al
+                    igual de la mayoría de objetos con los que interactuar.</p>
+
+                <p>Pokémon Platinum salió a la venta el 13 de septiembre de 2008 en Japón29​ y es un remake de Pokémon
+                    Diamond y Pearl, añadiendo nuevas características e historia. Los títulos spin-off de la cuarta
+                    generación, Pokémon Mystery Dungeon: Explorers of Time y Explorers of Darkness, salieron a la venta
+                    el 20 de abril de 2008. De igual manera, Pokémon Battle Revolution para Wii, el cual dispone de
+                    conectividad Wi-Fi.</p>​
+
+                <p>El 12 de septiembre de 2009 (14 de marzo de 2010 en América y 26 de marzo de 2010 en Europa) salió a
+                    la venta en Japón los remakes de los juegos Pokémon Gold y Silver para la consola Nintendo DS bajo
+                    el título Pokémon HeartGold y SoulSilver.</p>
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g6">
+        <div class="popup">
+            <div class="popup__img popup__img-7"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Sexta Generación</h1>
+                <p>El 8 de enero de 2013 fueron anunciados Pokémon X e Y,34​ que fueron lanzados el 12 de octubre del
+                    mismo año.33​ Se desarrolla en la región de Kalos. Se han añadido 69 Pokémon nuevos (desde Chespin
+                    hasta Zygarde), sumando un total de 718 pokémon, posteriormente se añadirían 3 nuevos pokémon
+                    (Diancie, Hoopa y Volcanion), completando así 721 especies de pokémon. Se han añadido las
+                    megaevoluciones y el tipo hada, que es supereficaz contra el tipo dragón.</p>
+
+                <p>Estaba previsto que el lanzamiento del Banco de Pokémon y el Poké Trasladador para Nintendo 3DS fuera
+                    el 27 de diciembre de 2013, pero al final se retrasó debido al tráfico elevado de Nintendo
+                    Network.36​ Ambos juegos están disponibles desde el 21 de enero en Japón,37​ el 5 de febrero en
+                    América y el 4 de febrero en Europa, Australia y Nueva Zelanda.</p>
+
+                <p>El tiempo para conseguir pases gratuitos se alargó hasta el 21 de febrero en Japón37​ y el 14 de
+                    marzo en Europa, América, Australia y Nueva Zelanda.</p>
+
+                <p>El 7 de mayo de 2014 fueron anunciados Pokémon Rubí Omega y Pokémon Zafiro Alfa, remakes de Pokémon
+                    Rubí y Zafiro, los cuales fueron lanzados a finales de noviembre del mismo año.</p>
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g7">
+        <div class="popup popup-2">
+            <div class="popup__img popup__img-8"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Septima Generación</h1>
+                <p>El 26 de febrero de 2016, y celebrando los 20 años de la salida del primer juego de la franquicia,
+                    fueron anunciados Pokémon Sol y Luna, que fueron lanzados el 18 de noviembre de 2016 (23 de
+                    noviembre en Europa) e iniciaron la séptima generación. Ambos juegos son compatibles con Nintendo
+                    3DS, Nintendo 2DS, New Nintendo 3DS y New Nintendo 2DS. Fueron los primeros juegos de la franquicia
+                    en incluir los idiomas chino tradicional y chino simplificado. La región en la que transcurre la
+                    historia es "Alola", en esta ocasión se trata de un archipiélago formado por cuatro islas y una
+                    artificial. El juego está repleto de leyendas y misterios que crean un folklore de una profundidad
+                    que no se había visto anteriormente en la saga. Muchos medios catalogaron Alola como la región mejor
+                    ambientada de la franquicia, de hecho, "Sol y Luna" se llevaron ante gran variedad de medios de la
+                    crítica mundial el "galardón" de "mejor juego de la saga".</p>
+
+                <p>El 6 de junio de 2017, durante un "Pokémon Direct" en el que además se presentó Pokkén Tournament DX
+                    para Nintendo Switch y la versión para consola virtual de Nintendo 3DS de los clásicos Pokémon Oro y
+                    Plata, Game Freak anunció oficialmente dos nuevos títulos que continuarían la séptima generación de
+                    la franquicia, Pokémon Ultrasol y Ultraluna, los cuales salieron a la venta el 17 de noviembre de
+                    2017 en todo el mundo. Estas nuevas ediciones son, de nuevo, jugables en todas las consolas de la
+                    familia Nintendo 3DS e incluyen nuevos Pokémon, nuevas funciones, una historia alternativa y una
+                    región de Alola redefinida con nuevas zonas, entre otras novedades.</p>​
+
+                <p>Fue también durante esta generación en la que, en verano de 2016, ocurrió el boom ocasionado por la
+                    salida de la famosa aplicación de móviles Pokémon GO, hecho que propulsó las ventas de Pokémon Sol y
+                    Luna, que fueron los juegos que más rápido vendieron sus copias en la vida de la consola Nintendo
+                    3DS en su primera semana y recaudaron más de 15 millones de ventas en tan solo su primer año (dato
+                    que a Pokémon X e Y, primer juego de la anterior generación, le costó casi 4 años alcanzar). Game
+                    Freak, vio una gran oportunidad en esto y decidió aprovechar el fenómeno, por ello, se propusieron
+                    reinventar la franquicia en un nuevo juego que usase las ideas y mecánicas de Pokémon GO, creando
+                    así el que sería el primer juego de la saga principal para una consola de sobremesa, Nintendo Switch
+                    43​. Pokémon Let's Go, Pikachu! y Let's Go, Eevee! salieron finalmente a la venta el 16 de noviembre
+                    de 2018, estos juegos, según su director, Junichi Masuda, son los primeros de una rama más casual
+                    que pretende atraer nuevos jugadores e introducirlos en la saga.</p>
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+    <div class="contenedor-popup" id="g8">
+        <div class="popup">
+            <div class="popup__img popup__img-9"></div>
+            <div class="popup__info">
+                <h1 class="heading-3">Octava Generación</h1>
+                El Pokémon Direct emitido el 27 de febrero de 2019 dio a conocer los títulos de los primeros juegos de
+                octava generación, Pokémon espada y Pokémon escudo. Durante el directo de 7 minutos se mostraron algunos
+                lugares de la nueva región, llamada "Galar", los nuevos Pokémon iniciales, la vuelta de los clásicos
+                gimnasios y el avance gráfico que suponen estos nuevos videojuegos.45​ El juego será lanzado a finales
+                de este año para la consola Nintendo Switch. Tras el reciente pokémon direct emitido el 6 de julio,se ha
+                oficiado la fecha de salida de las nuevas ediciones de pokémon siendo el 15 de noviembre de 2019.
+
+            </div>
+            <a href="#historia" class="btn-close-popup">X</a>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
